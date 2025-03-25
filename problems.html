@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Problems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            font-size: 20px;
+        }
+
+        header {
+            background: #4a90e2;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #4a90e2;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 10px 20px;
+        }
+
+        footer {
+            background: #4a90e2;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #quote {
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mental Health Awareness</h1>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Introduction</a></li>
+                <li><a href="problems.html">Problems</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aoutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="problems">
+            <h2>Common Mental Health Problems</h2>
+            <p>Many students face mental health challenges during their teenage years. Here are some common issues:</p>
+            <p>The deep-rooted cause of mental health issues in 14- to 18-year-olds often stems from a complex mix of rapidly changing social environments and heightened expectations...</p>
+            <ul>
+                <li><strong>Anxiety:</strong> Feelings of worry, nervousness, or fear that can be overwhelming and affect daily activities.</li>
+                <li><strong>Depression:</strong> Persistent sadness, loss of interest in activities, and a feeling of hopelessness.</li>
+                <li><strong>Stress:</strong> Emotional strain resulting from academic pressures, social expectations, or personal issues.</li>
+                <li><strong>Eating Disorders:</strong> Abnormal eating habits that can negatively impact health, emotions, and quality of life.</li>
+                <li><strong>Social Isolation:</strong> Feelings of loneliness or disconnection from peers, which can exacerbate mental health issues.</li>
+                <li><strong>Substance Abuse:</strong> The harmful use of substances such as drugs or alcohol to cope with stress or emotional pain.</li>
+            </ul>
+            <p>If you or someone you know is struggling with any of these issues, it's important to seek help. You are not alone, and support is available.</p>
+            <img src="img.4.JPG" style="width:100%" alt="Mental Health Awareness">
+        </section>
+        
+        <div id="quote"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 InnerSpark. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const quotes = [
+            "Your mental health is a priority. Your happiness is essential.",
+            "Sometimes the people around you won’t understand your journey. Stay true to yourself.",
+            "You don’t have to control your thoughts. You just have to stop letting them control you.",
+            "Take time to do what makes your soul happy.",
+            "It’s okay to not be okay. Just don’t give up.",
+        ];
+
+        function displayQuote() {
+            const quoteElement = document.getElementById("quote");
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        }
+
+        setInterval(displayQuote, 5000); // Change quote every 5 seconds
+        displayQuote(); // Display initial quote
+    </script>
+</body>
+</html>

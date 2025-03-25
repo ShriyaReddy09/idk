@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mental Health Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            font-size: 20px;
+        }
+
+        header {
+            background: #4a90e2;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2, h3 {
+            color: #4a90e2;
+        }
+
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #4a90e2;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .affirmation-box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #4a90e2;
+            border-radius: 10px;
+            background: #eef5fc;
+            text-align: center;
+        }
+
+        .affirmation-box button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .affirmation-box button:hover {
+            background: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mental Health Awareness</h1>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Introduction</a></li>
+                <li><a href="problems.html">Problems</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aoutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>
+                We'd love to hear from you! By reaching out to us through our contact form, you are taking an important step toward improving your mental well-being or helping someone else who may need support. At InnerSpark, we are dedicated to providing personalized assistance tailored to your specific needs.
+            </p>
+            <p>
+                When you contact us, our team will carefully review your concerns and provide thoughtful recommendations based on your situation. This may include suggesting experienced mental health professionals, counselors, or doctors who specialize in the challenges you’re facing. Additionally, we’ll help connect you with nearby support systems, such as community resources, support groups, and wellness programs, ensuring you have access to the help you need within your area.
+            </p>
+            
+            <div class="affirmation-box">
+                <p id="affirmation">You are capable of amazing things.</p>
+                <button id="new-affirmation-btn">New Affirmation</button>
+            </div>
+            
+            <div class="benefits">
+                <h3>How this benefits you:</h3>
+                <ul>
+                    <li><strong>Tailored Solutions:</strong> Every individual is unique, and so are their mental health needs. By contacting us, you’ll receive customized advice and resources that address your specific challenges.</li>
+                    <li><strong>Access to Experts:</strong> We’ll connect you with trusted professionals who can guide you effectively, ensuring you receive high-quality support.</li>
+                    <li><strong>Convenience:</strong> With our assistance, you won’t need to search endlessly for the right help.</li>
+                </ul>
+            </div>
+
+            <div class="benefits">
+                <h3>How this benefits us:</h3>
+                <ul>
+                    <li><strong>Deeper Understandings:</strong> Hearing from you helps us understand the diverse challenges individuals face, enabling us to improve our platform and make it even more effective.</li>
+                    <li><strong>Building Community:</strong> By assisting you, we contribute to creating a network of support and encouragement, fostering a sense of belonging and care.</li>
+                    <li><strong>Spreading Awareness:</strong> Every person who reaches out helps us expand awareness about mental health issues and solutions, encouraging others to seek help as well.</li>
+                </ul>
+            </div>
+
+            <p>
+                At InnerSpark, we believe that collaboration and communication are key to overcoming mental health challenges. By working together, we can help you find the right support and resources while building a stronger, more empathetic community. Reach out today—we’re here to support you every step of the way!
+            </p>
+            <div class="link-label">
+                <label for="contact-form">
+                    <a href="https://docs.google.com/forms/d/12BvKmd-SlJb0VtuLTo3kZlJeDYSVQUVWbIPjuM8_8fE/prefill" target="_blank">Click here to access our contact form</a>
+                </label>
+            </div>  
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 InnerSpark. All rights reserved.</p> 
+    </footer>
+
+    <script>
+        const affirmations = [
+            "You are capable of amazing things.",
+            "Your feelings are valid, and you deserve support.",
+            "Every day is a new opportunity to grow.",
+            "You are stronger than you think.",
+            "It's okay to take one step at a time."
+        ];
+
+        const affirmationText = document.getElementById('affirmation');
+        const newAffirmationButton = document.getElementById('new-affirmation-btn');
+
+        newAffirmationButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * affirmations.length);
+            affirmationText.textContent = affirmations[randomIndex];
+        });
+    </script>
+</body>
+</html>

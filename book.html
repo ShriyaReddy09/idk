@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen Fitness Flipbook</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5e6ca, #eae0d5);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+        .flipbook-container {
+            width: 60%;
+            height: 80vh;
+            perspective: 1000px;
+            position: relative;
+        }
+        .flipbook {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff5e1;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        .page {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 18px;
+            padding: 20px;
+            transition: transform 1s;
+        }
+        .page-image {
+            width: 80%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+        .hidden { display: none; }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #d4a373;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .left-arrow { left: 10px; }
+        .right-arrow { right: 10px; }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flipbook-container">
+        <h1>Teen Fitness Flipbook</h1>
+        <div class="flipbook">
+            <button class="arrow left-arrow" onclick="prevPage()">&#10094;</button>
+            <div class="page" id="page1">
+                <h2>Introduction</h2>
+                <p>Welcome to your Teen Fitness Flipbook! This guide includes simple exercises to improve strength, endurance, and flexibility.</p>
+            </div>
+            <div class="page hidden" id="page2">
+                <h2>Warm-Up Routine</h2>
+                <p>Prepare your body for exercise with these warm-ups.</p>
+                <img src="img.5.jpg" alt="Warm-Up Routine" class="page-image">
+            </div>
+            <div class="page hidden" id="page3">
+                <h2>Squats & Jumps</h2>
+                <p>Build lower body strength with these exercises.</p>
+                <img src="img.6.jpg" alt="Squats & Jumps" class="page-image">
+            </div>
+            <div class="page hidden" id="page4">
+                <h2>Lunges & Legs</h2>
+                <p>Enhance your leg strength and balance.</p>
+                <img src="img.7.jpg" alt="Lunges & Legs" class="page-image">
+            </div>
+            <div class="page hidden" id="page5">
+                <h2>Core Workout</h2>
+                <p>Strengthen your core with these movements.</p>
+                <img src="img.9.jpg" alt="Core Workout" class="page-image">
+            </div>
+            <div class="page hidden" id="page6">
+                <h2>Plank Series</h2>
+                <p>Boost core endurance and stability.</p>
+                <img src="img.8.jpg" alt="Plank Series" class="page-image">
+            </div>
+            <div class="page hidden" id="page7">
+                <h2>Upper Body Strength</h2>
+                <p>Develop your arms, shoulders, and back.</p>
+                <img src="img.10.jpg" alt="Upper Body Strength" class="page-image">
+            </div>
+            <div class="page hidden" id="page8">
+                <h2>Cardio Burst</h2>
+                <p>Increase endurance with high-energy exercises.</p>
+                <img src="img.11.jpg" alt="Cardio Burst" class="page-image">
+            </div>
+            <div class="page hidden" id="page9">
+                <h2>Full-Body Circuit</h2>
+                <p>Challenge your body with a complete workout.</p>
+                <img src="img.12.jpg" alt="Full-Body Circuit" class="page-image">
+            </div>
+            <div class="page hidden" id="page10">
+                <h2>Flexibility & Stretching</h2>
+                <p>Improve mobility and prevent stiffness.</p>
+                <img src="img.13.jpg" alt="Flexibility & Stretching" class="page-image">
+            </div>
+            <div class="page hidden" id="page11">
+                <h2>Cool Down Routine</h2>
+                <p>Recover after workouts with these stretches.</p>
+                <img src="img.14.jpg" alt="Cool Down Routine" class="page-image">
+            </div>
+            <div class="page hidden" id="page12">
+                <h2>Quick 5-Minute Routine</h2>
+                <p>Stay active on busy days.</p>
+                <img src="img.15.jpg" alt="Quick 5-Minute Routine" class="page-image">
+            </div>
+            <div class="page hidden" id="page13">
+                <h2>Fun Challenge – 7-Minute Workout</h2>
+                <p>Test your fitness with this challenge.</p>
+                <img src="img.16.jpg" alt="7-Minute Workout" class="page-image">
+            </div>
+            <div class="page hidden" id="page14">
+                <h2>Fitness Tracker</h2>
+                <p>Track your progress with this log.</p>
+                <img src="img.19.jpg" alt="Fitness Tracker" class="page-image">
+            </div>
+            <div class="page hidden" id="page15">
+                <h2>Final Motivation</h2>
+                <p>"Stay consistent, stay strong! Every step counts!"</p>
+                <img src="img.18.jpg" alt="Final Motivation" class="page-image">
+            </div>
+            <button class="arrow right-arrow" onclick="nextPage()">&#10095;</button>
+        </div>
+ 
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 15;
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
+            document.getElementById('page' + page).classList.remove('hidden');
+        }
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+    </script>
+</body>
+</html>
+    

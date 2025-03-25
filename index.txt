@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form input[type="text"],
+        form input[type="email"] {
+            margin: 5px 0;
+            padding: 10px;
+            width: 200px;
+        }
+
+        form input[type="submit"] {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mental Health Awareness</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#counseling">Counseling Sessions</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Mental Health</h2>
+        <p>Mental health is crucial for students aged 14-18 as it impacts their decision-making and future. Factors such as peer pressure, expectations, and personal life can greatly affect their mental well-being.</p>
+    </section>
+
+    <section id="solutions">
+        <h2>Solutions</h2>
+        <ul>
+            <li>Open communication with trusted friends or family.</li>
+            <li>Practice mindfulness and relaxation techniques.</li>
+            <li>Seek professional help when needed.</li>
+            <li>Engage in physical activities and hobbies.</li>
+        </ul>
+    </section>
+
+    <section id="counseling">
+        <h2>Counseling Sessions</h2>
+        <p>We offer counseling sessions to help students navigate their mental health challenges. Our trained professionals are here to listen and provide guidance.</p>
+        <button onclick="window.location.href='#contact'">Book a Session</button>
+    </section>
+
+    <footer>
+        <h2>Contact Us</h2>
+        <p>If you need help, don't hesitate to reach out. We are here for you!</p>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Submit">
+        </form>
+    </footer>
+</body>
+</html> 
